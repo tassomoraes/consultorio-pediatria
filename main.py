@@ -22,7 +22,9 @@ def criar_protuario(dic_protuarios, ultimo_num_paciente):
 #BUSCA PRONTUÁRIO
 def busca_prontuario_por_numero(dic_prontuarios, numero):
 
-    if(len(dic_prontuarios) > 0):
+    if (len(dic_prontuarios) < 1) or (numero not in dic_prontuarios.keys()):
+        print("Nenhum prontuário encontrado!")
+    else:
         prontuario = dic_prontuarios[numero]
 
         print(f"Nome: {prontuario['nome_crianca']}\n"
@@ -37,16 +39,13 @@ def busca_prontuario_por_numero(dic_prontuarios, numero):
               f"Altura: {prontuario['altura']}\n"
               f"Perimétro cefálico: {prontuario['perim_cefalico']}\n"
               )
-    else:
-        print("Nenhum usuário cadastrado!")
 
 #REMOVER PRONTUARIO
 def remove_prontuario(dic_prontuarios, numero):
 
-    if (len(dic_prontuarios) > 0):
-        dic_prontuarios.pop(numero)
+    if (len(dic_prontuarios) < 1) or (numero not in dic_prontuarios.keys()):
+        print("Nenhum prontuário encontrado!")
     else:
-        print("Nenhum usuário cadastrado!")
-
+        dic_prontuarios.pop(numero)
 
 
