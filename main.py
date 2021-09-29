@@ -94,11 +94,65 @@ def busca_prontuario_por_numero(dic_prontuarios, numero):
               )
 
 #REMOVER PRONTUARIO
-def remove_prontuario(dic_prontuarios, numero):
+def remove_prontuario_por_numero(dic_prontuarios, numero):
 
     if (len(dic_prontuarios) < 1) or (numero not in dic_prontuarios.keys()):
         print("Nenhum prontuário encontrado!")
     else:
         dic_prontuarios.pop(numero)
 
+#LISTAR PRONTUÁRIOS
+def listar_prontuarios(dic_prontuarios):
+    for num_prontuario in prontuarios:
+        print(f"---PRONTUÁRIO N: {num_prontuario}---")
+        busca_prontuario_por_numero(dic_prontuarios, num_prontuario)
+
+#IMRPIME MENU
+def imprime_menu():
+    menu = """
+    ####### MENU #######
+    1 - Cadastrar
+    2 - Buscar
+    3 - Remover 
+    4 - Atualizar
+    5 - Listar
+    0 - Sair
+    ####################
+    """
+    print(menu)
+
+prontuarios = {}
+ultimo_paciente = 0
+opcao = ""
+
+while (opcao != "0"):
+
+    imprime_menu()
+    opcao = input("Digite uma das opções: ")
+
+    if (opcao == "1"):
+        print("\nCadastrar novo paciente:")
+        ultimo_paciente = criar_protuario(prontuarios,ultimo_paciente)
+
+    elif (opcao == "2"):
+        print("\nAtualizar paciente:")
+        numero = int(input("Digite o número do paciente: "))
+        atualizar_prontuario_por_numero(prontuarios,numero)
+
+    elif (opcao == "3"):
+        print("\nRemover paciente:")
+        numero = int(input("Digite o número do paciente: "))
+        remove_prontuario_por_numero(prontuarios, numero)
+
+    elif (opcao == "4"):
+        print("\nAtualizar paciente:")
+        numero = int(input("Digite o número do paciente: "))
+        atualizar_prontuario_por_numero(prontuarios, numero)
+
+    elif (opcao == "5"):
+        print("\nListando prontuários:")
+        listar_prontuarios(prontuarios)
+
+    elif (opcao != "0"):
+        print("Opção invalida!")
 
