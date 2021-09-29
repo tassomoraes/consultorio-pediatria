@@ -95,9 +95,11 @@ def remove_prontuario_por_numero(dic_prontuarios, numero):
 
 #LISTAR PRONTUÁRIOS
 def listar_prontuarios(dic_prontuarios):
-    for num_prontuario in prontuarios:
-        print(f"---PRONTUÁRIO N: {num_prontuario}---")
-        busca_prontuario_por_numero(dic_prontuarios, num_prontuario)
+    print(f"Paciente     -   N. do prontuário")
+    for num_prontuario in dic_prontuarios:
+        nome = dic_prontuarios[num_prontuario]['Nome']
+        print(f" {nome}\t\t - \t\t {num_prontuario}")
+        #busca_prontuario_por_numero(dic_prontuarios, num_prontuario)
 
 #IMRPIME MENU
 def imprime_menu():
@@ -127,9 +129,9 @@ while (opcao != "0"):
         ultimo_paciente = criar_protuario(prontuarios,ultimo_paciente)
 
     elif (opcao == "2"):
-        print("\nAtualizar paciente:")
+        print("\nBuscar paciente:")
         numero = int(input("Digite o número do paciente: "))
-        atualizar_prontuario_por_numero(prontuarios,numero)
+        busca_prontuario_por_numero(prontuarios,numero)
 
     elif (opcao == "3"):
         print("\nRemover paciente:")
