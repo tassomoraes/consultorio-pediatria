@@ -115,9 +115,21 @@ def imprime_menu():
     """
     print(menu)
 
+#SALVA ARQUIVO
+def salva_arquivo(dic_prontuarios, nome_arquivo, arquivo):
+
+    arquivo.write(str(ultimo_paciente)+"\n")
+    for num_pront, dic_pront in dic_prontuarios.items():
+        arquivo.write(f"{num_pront}\n")
+        for chave, valor in dic_pront.items():
+            arquivo.write(f"{chave}\n{valor}\n")
+        arquivo.flush()
+
+
 prontuarios = {}
 ultimo_paciente = 0
 opcao = ""
+nome_do_arquivo = r"C:\Users\tasso\Documents\Residência\Intro Python\projeto\consultorio-pediatria\prontuarios.txt"
 
 while (opcao != "0"):
 
@@ -127,6 +139,9 @@ while (opcao != "0"):
     if (opcao == "1"):
         print("\nCadastrar novo paciente:")
         ultimo_paciente = criar_protuario(prontuarios,ultimo_paciente)
+        arquivo = open(nome_do_arquivo, "w", encoding="windows-1252")
+        salva_arquivo(prontuarios,ultimo_paciente,arquivo)
+        arquivo.close()
 
     elif (opcao == "2"):
         print("\nBuscar paciente:")
@@ -149,4 +164,3 @@ while (opcao != "0"):
 
     elif (opcao != "0"):
         print("Opção invalida!")
-
