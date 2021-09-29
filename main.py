@@ -20,10 +20,10 @@ def criar_protuario(dic_protuarios, ultimo_num_paciente):
     return num_paciente
 
 #BUSCA PRONTUÁRIO
-def busca_prontuario_por_numero(dic_protuarios, numero):
+def busca_prontuario_por_numero(dic_prontuarios, numero):
 
-    if(len(dic_protuarios) > 0):
-        prontuario = dic_protuarios[numero]
+    if(len(dic_prontuarios) > 0):
+        prontuario = dic_prontuarios[numero]
 
         print(f"Nome: {prontuario['nome_crianca']}\n"
               f"Sexo: {prontuario['sexo']}\n"
@@ -40,15 +40,13 @@ def busca_prontuario_por_numero(dic_protuarios, numero):
     else:
         print("Nenhum usuário cadastrado!")
 
-#PARA TESTAR
-prontuarios = {}
-ultimo_paciente = 0
-criar = "sim"
-while criar == "sim":
-    num_paciente = int(input("Digite o número do paciente: "))
-    busca_prontuario_por_numero(prontuarios, num_paciente)
-    criar = input("Deseja criar um novo prontuário? ")
-    ultimo_paciente = criar_protuario(prontuarios, ultimo_paciente)
-    print(len(prontuarios))
-    print(prontuarios)
+#REMOVER PRONTUARIO
+def remove_prontuario(dic_prontuarios, numero):
+
+    if (len(dic_prontuarios) > 0):
+        dic_prontuarios.pop(numero)
+    else:
+        print("Nenhum usuário cadastrado!")
+
+
 
