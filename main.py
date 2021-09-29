@@ -19,6 +19,54 @@ def criar_protuario(dic_protuarios, ultimo_num_paciente):
 
     return num_paciente
 
+#ATUALIZAR
+def atualizar_prontuario_por_numero(dic_prontuarios, numero):
+
+    if (len(dic_prontuarios) < 1) or (numero not in dic_prontuarios.keys()):
+        print("Nenhum prontuário encontrado!")
+    else:
+        prontuario = dic_prontuarios[numero]
+        opcao = ""
+        while (opcao != "não"):
+            menu = """
+        ####### MENU #######
+        1 - Nome
+        2 - Sexo
+        3 - Nome da mãe 
+        4 - Nome do pai
+        5 - Peso
+        6 - IMC
+        7 - Altura
+        8 - Perímetro cefálico
+        0 - Sair
+        ####################
+        
+    Qual informação você deseja atualizar: """
+            opcao = input(menu)
+            if(opcao == "1"):
+                prontuario['nome_crianca'] = input("\tDigite o novo nome: ")
+            elif(opcao == "2"):
+                prontuario['sexo'] = input("\tDigite o novo sexo: ")
+            elif(opcao == "3"):
+                prontuario['nome_mae'] = input("\tDigite o novo nome da mãe: ")
+            elif(opcao == "4"):
+                prontuario['nome_pai'] = input("\tDigite o novo nome do pai: ")
+            elif(opcao == "5"):
+                prontuario['peso'] = input("\tDigite o novo peso: ")
+            elif(opcao == "6"):
+                prontuario['IMC'] = input("\tDigite o novo IMC: ")
+            elif(opcao == "7"):
+                prontuario['altura'] = input("\tDigite o nova altura: ")
+            elif(opcao == "8"):
+                prontuario['perim_cefalico'] = input("\tDigite o novo perímetro cefálico: ")
+            else:
+                print("Entrada inválida!")
+
+            opcao = input("\tDeseja alterar mais alguma informação? ")
+
+        print("---Contao atualizado---\n")
+        busca_prontuario_por_numero(dic_prontuarios,numero)
+
 #BUSCA PRONTUÁRIO
 def busca_prontuario_por_numero(dic_prontuarios, numero):
 
