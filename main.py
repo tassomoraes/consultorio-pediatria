@@ -74,23 +74,14 @@ def atualizar_prontuario_por_numero(dic_prontuarios, numero):
 #BUSCA PRONTUÁRIO
 def busca_prontuario_por_numero(dic_prontuarios, numero):
 
+    #verifica se o prontuário existe ou não
     if (len(dic_prontuarios) < 1) or (numero not in dic_prontuarios.keys()):
         print("Nenhum prontuário encontrado!")
     else:
         prontuario = dic_prontuarios[numero]
 
-        print(f"Nome: {prontuario['nome_crianca']}\n"
-              f"Sexo: {prontuario['sexo']}\n"
-              #f"Telefone do Responsável: {prontuario['telefone_respons']}"
-              f"Mãe: {prontuario['nome_mae']}\n"
-              f"Pai: {prontuario['nome_pai']}\n"
-              #f"Irmãos: {prontuario['qtd_irmaos']}"
-              #f"Religião: {prontuario['religiao']}"
-              f"Peso: {prontuario['peso']}\n"
-              f"IMC: {prontuario['IMC']}\n"
-              f"Altura: {prontuario['altura']}\n"
-              f"Perimétro cefálico: {prontuario['perim_cefalico']}\n"
-              )
+        for chave in prontuario.keys():
+            print(f"{chave}: {prontuario[chave]}")
 
 #REMOVER PRONTUARIO
 def remove_prontuario_por_numero(dic_prontuarios, numero):
