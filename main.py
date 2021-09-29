@@ -38,41 +38,37 @@ def imprime_menu_atualizar():
     ####################
         
 Qual informação você deseja atualizar: """
-    opcao = input(menu)
+    opcao = int(input(menu))
     return opcao
 
 #ATUALIZAR
 def atualizar_prontuario_por_numero(dic_prontuarios, numero):
 
+    #verifica se o prontuário existe ou não
     if (len(dic_prontuarios) < 1) or (numero not in dic_prontuarios.keys()):
         print("Nenhum prontuário encontrado!")
     else:
         prontuario = dic_prontuarios[numero]
         opcao = ""
+        #chaves recebe uma lista das chaves do dicionário
+        chaves = list(prontuario.keys())
+
+        # pergunta qual dado atualizar
         while (opcao != "não"):
-            opcao = imprime_menu_atualizar()
-            if(opcao == "1"):
-                prontuario['nome_crianca'] = input("\tDigite o novo nome: ")
-            elif(opcao == "2"):
-                prontuario['sexo'] = input("\tDigite o novo sexo: ")
-            elif(opcao == "3"):
-                prontuario['nome_mae'] = input("\tDigite o novo nome da mãe: ")
-            elif(opcao == "4"):
-                prontuario['nome_pai'] = input("\tDigite o novo nome do pai: ")
-            elif(opcao == "5"):
-                prontuario['peso'] = input("\tDigite o novo peso: ")
-            elif(opcao == "6"):
-                prontuario['IMC'] = input("\tDigite o novo IMC: ")
-            elif(opcao == "7"):
-                prontuario['altura'] = input("\tDigite o nova altura: ")
-            elif(opcao == "8"):
-                prontuario['perim_cefalico'] = input("\tDigite o novo perímetro cefálico: ")
-            else:
+            indice = imprime_menu_atualizar()    #recebe um inteiro
+
+            #se o indice estiver entre 1 e a quantidade de chaves
+            if(indice >= 1 and indice <= len(chaves)):
+                novo_valor = input(f"\tDigite o novo valor de {chaves[indice-1]}: ")
+                prontuario[chaves[indice-1]] = novo_valor
+
+            elif(opcao != 0):
                 print("Entrada inválida!")
 
             opcao = input("\tDeseja alterar mais alguma informação? ")
 
-        print("---Contao atualizado---\n")
+
+        print("---Contao atualizado---")
         busca_prontuario_por_numero(dic_prontuarios,numero)
 
 #BUSCA PRONTUÁRIO
