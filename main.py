@@ -1,14 +1,14 @@
-
+#CRIA PRONTUÁRIO
 def criar_protuario(dic_protuarios, ultimo_num_paciente):
     prontuario = {}
     num_paciente = ultimo_num_paciente + 1
     prontuario['nome_crianca'] = input("Nome da crianca: ")
     prontuario['sexo'] = input("Sexo da criança: ")
-    prontuario['telefone_respons'] = input("Telefone do responsável pela criança: ")
+    #prontuario['telefone_respons'] = input("Telefone do responsável pela criança: ")
     prontuario['nome_mae'] = input("Nome da mãe: ")
     prontuario['nome_pai'] = input("Nome do pai: ")
-    prontuario['qtd_irmaos'] = input("Quantidade de irmãos: ")
-    prontuario['religiao'] = input("Religião: ")
+    #prontuario['qtd_irmaos'] = input("Quantidade de irmãos: ")
+    #prontuario['religiao'] = input("Religião: ")
     prontuario['peso'] = input("Peso atual: ")
     prontuario['IMC'] = input("IMC atual: ")
     prontuario['altura'] = input("Altura atual: ")
@@ -16,16 +16,39 @@ def criar_protuario(dic_protuarios, ultimo_num_paciente):
     #prontuario['data_consulta'] = input("Data da consulta: ")
     #prontuario['novo_contato'] = [nome, telefone]
     dic_protuarios[num_paciente] = prontuario
-    print(num_paciente)
+
     return num_paciente
 
+#BUSCA PRONTUÁRIO
+def busca_prontuario_por_numero(dic_protuarios, numero):
+
+    if(len(dic_protuarios) > 0):
+        prontuario = dic_protuarios[numero]
+
+        print(f"Nome: {prontuario['nome_crianca']}\n"
+              f"Sexo: {prontuario['sexo']}\n"
+              #f"Telefone do Responsável: {prontuario['telefone_respons']}"
+              f"Mãe: {prontuario['nome_mae']}\n"
+              f"Pai: {prontuario['nome_pai']}\n"
+              #f"Irmãos: {prontuario['qtd_irmaos']}"
+              #f"Religião: {prontuario['religiao']}"
+              f"Peso: {prontuario['peso']}\n"
+              f"IMC: {prontuario['IMC']}\n"
+              f"Altura: {prontuario['altura']}\n"
+              f"Perimétro cefálico: {prontuario['perim_cefalico']}\n"
+              )
+    else:
+        print("Nenhum usuário cadastrado!")
+
+#PARA TESTAR
 prontuarios = {}
 ultimo_paciente = 0
 criar = "sim"
 while criar == "sim":
+    num_paciente = int(input("Digite o número do paciente: "))
+    busca_prontuario_por_numero(prontuarios, num_paciente)
     criar = input("Deseja criar um novo prontuário? ")
     ultimo_paciente = criar_protuario(prontuarios, ultimo_paciente)
-    print(ultimo_paciente)
-
+    print(len(prontuarios))
     print(prontuarios)
 
