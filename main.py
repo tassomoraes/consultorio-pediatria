@@ -19,6 +19,25 @@ def criar_protuario(dic_protuarios, ultimo_num_paciente):
 
     return num_paciente
 
+#MENU ATUALIZAR
+def imprime_menu_atualizar():
+    menu = """
+    ####### MENU #######
+    1 - Nome
+    2 - Sexo
+    3 - Nome da mãe 
+    4 - Nome do pai
+    5 - Peso
+    6 - IMC
+    7 - Altura
+    8 - Perímetro cefálico
+    0 - Sair
+    ####################
+        
+Qual informação você deseja atualizar: """
+    opcao = input(menu)
+    return opcao
+
 #ATUALIZAR
 def atualizar_prontuario_por_numero(dic_prontuarios, numero):
 
@@ -28,21 +47,7 @@ def atualizar_prontuario_por_numero(dic_prontuarios, numero):
         prontuario = dic_prontuarios[numero]
         opcao = ""
         while (opcao != "não"):
-            menu = """
-        ####### MENU #######
-        1 - Nome
-        2 - Sexo
-        3 - Nome da mãe 
-        4 - Nome do pai
-        5 - Peso
-        6 - IMC
-        7 - Altura
-        8 - Perímetro cefálico
-        0 - Sair
-        ####################
-        
-    Qual informação você deseja atualizar: """
-            opcao = input(menu)
+            opcao = imprime_menu_atualizar()
             if(opcao == "1"):
                 prontuario['nome_crianca'] = input("\tDigite o novo nome: ")
             elif(opcao == "2"):
