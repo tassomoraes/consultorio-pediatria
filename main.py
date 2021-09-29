@@ -1,20 +1,23 @@
 #CRIA PRONTUÁRIO
 def criar_protuario(dic_protuarios, ultimo_num_paciente):
     prontuario = {}
-    num_paciente = ultimo_num_paciente + 1
-    prontuario['nome_crianca'] = input("Nome da crianca: ")
-    prontuario['sexo'] = input("Sexo da criança: ")
-    #prontuario['telefone_respons'] = input("Telefone do responsável pela criança: ")
-    prontuario['nome_mae'] = input("Nome da mãe: ")
-    prontuario['nome_pai'] = input("Nome do pai: ")
-    #prontuario['qtd_irmaos'] = input("Quantidade de irmãos: ")
-    #prontuario['religiao'] = input("Religião: ")
-    prontuario['peso'] = input("Peso atual: ")
-    prontuario['IMC'] = input("IMC atual: ")
-    prontuario['altura'] = input("Altura atual: ")
-    prontuario['perim_cefalico'] = input("Perimetro cefálico atual: ")
-    #prontuario['data_consulta'] = input("Data da consulta: ")
-    #prontuario['novo_contato'] = [nome, telefone]
+    lista_chaves = ["Nome", "Sexo", "Mãe", "Pai", "Peso", "IMC", "Altura", "Perimétro Cefálico"]
+    lista_input = ["Digite o nome da criança",
+                   "Digite o sexo da criança",
+                   "Digite o nome da mãe",
+                   "Digite o nome do pai",
+                   "Digite o peso atual",
+                   "Digite o IMC atual",
+                   "Digite a altura atual",
+                   "Digite o perímetro cefálico atual"]
+
+    chaves_input = zip(lista_chaves,lista_input)
+
+    num_paciente = ultimo_num_paciente + 1      #sempre incrementa a partir do ultimo criado
+
+    for chave, dado_input in chaves_input:
+        prontuario[chave] = input(dado_input+": ")
+
     dic_protuarios[num_paciente] = prontuario
 
     return num_paciente
