@@ -1,3 +1,6 @@
+import graficos
+from graficos import curva_de_crescimento_peso
+
 #CRIA PRONTUÁRIO
 def criar_protuario(dic_protuarios, ultimo_num_paciente,lista_chaves):
     prontuario = {}
@@ -88,6 +91,11 @@ def busca_prontuario_por_numero(dic_prontuarios, numero):
 
         for chave in prontuario.keys():
             print(f"{chave}: {prontuario[chave]}")
+
+    #GRAFICOS
+    nome_paciente = prontuario["Nome"]
+    nome_paciente = nome_paciente.split()[0]    # só o primeiro nome
+    graficos.curva_de_crescimento_peso(prontuario["Peso"],nome_paciente)
 
 #REMOVER PRONTUARIO POR NÚMERO
 def remove_prontuario_por_numero(dic_prontuarios, numero):
