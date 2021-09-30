@@ -15,7 +15,10 @@ def criar_protuario(dic_protuarios, ultimo_num_paciente,lista_chaves):
     num_paciente = ultimo_num_paciente + 1      #sempre incrementa a partir do ultimo criado
 
     for chave, dado_input in chaves_input:
-        prontuario[chave] = input(dado_input+": ")
+        if(chave == "Peso" or chave == "IMC" or chave == "Altura" or chave == "Perimétro Cefálico"):
+            prontuario[chave] = [float(input(dado_input + ": "))]
+        else:
+            prontuario[chave] = input(dado_input + ": ")
 
     dic_protuarios[num_paciente] = prontuario
 
