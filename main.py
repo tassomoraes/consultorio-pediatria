@@ -93,9 +93,7 @@ def busca_prontuario_por_numero(dic_prontuarios, numero):
             print(f"{chave}: {prontuario[chave]}")
 
     #GRAFICOS
-    nome_paciente = prontuario["Nome"]
-    nome_paciente = nome_paciente.split()[0]    # só o primeiro nome
-    graficos.curva_de_crescimento_peso(prontuario["Peso"],nome_paciente)
+    graficos.curva_de_crescimento_peso(prontuario["Peso"],prontuario["Nome"] )
 
 #REMOVER PRONTUARIO POR NÚMERO
 def remove_prontuario_por_numero(dic_prontuarios, numero):
@@ -262,6 +260,9 @@ while (opcao != "0"):
 
         print("\nListando prontuários:")
         listar_prontuarios(prontuarios)
+
+        #GRÁFICOS
+        graficos.porcentagem_peso(prontuarios)
 
     elif (opcao != "0"):
         print("Opção invalida!")
