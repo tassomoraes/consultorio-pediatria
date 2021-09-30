@@ -152,11 +152,35 @@ def salva_arquivo(dic_prontuarios, ultimo_paciente, arquivo):
 
         arquivo.flush()
 
+#LER AQUIVO
+def ler_arquivo(dic_prontuarios, nome_arquivo):
+    arquivo = open(nome_arquivo,"r")
+    linhas = arquivo.readlines()
+
+    # a primeira linha do arquivo contem o número do ultimo prontuário criado
+    num_ult_prontuario = int(linhas[0].strip())    # remove o \n e converte em inteiro
+    linhas.remove(linhas[0])
+
+    for linha in linhas:
+        numero, dados = linha.split("-")  # separa a chave do primeiro dicionário (número do prontuário)
+        num_prontuario = int(numero)
+
+        prontuario = {}
+        for item in dados.split(","):   # separa os itens do segundo dicionário
+            chave, dado = item.split(":")   # separa a chave do dado
+            prontuario[chave] = dado
+
+        prontuario["Perimétro Cefálico"] = dado.strip()
+        dic_prontuarios[num_prontuario] = prontuario
+
+    arquivo.close()
+    return num_ult_prontuario
 
 prontuarios = {}
 ultimo_paciente = 0
 opcao = ""
-nome_do_arquivo = r"C:\Users\tasso\Documents\Residência\Intro Python\projeto\consultorio-pediatria\prontuarios.txt"
+nome_do_arquivo = "prontuarios.txt"
+lista_dados = ["Nome", "Sexo", "Mãe", "Pai", "Peso", "IMC", "Altura", "Perimétro Cefálico"]
 
 while (opcao != "0"):
 
