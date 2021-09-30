@@ -1,7 +1,6 @@
 #CRIA PRONTUÁRIO
-def criar_protuario(dic_protuarios, ultimo_num_paciente):
+def criar_protuario(dic_protuarios, ultimo_num_paciente,lista_chaves):
     prontuario = {}
-    lista_chaves = ["Nome", "Sexo", "Mãe", "Pai", "Peso", "IMC", "Altura", "Perimétro Cefálico"]
     lista_input = ["Digite o nome da criança",
                    "Digite o sexo da criança",
                    "Digite o nome da mãe",
@@ -53,10 +52,10 @@ def atualizar_prontuario_por_numero(dic_prontuarios, numero):
         #chaves recebe uma lista das chaves do dicionário
         chaves = list(prontuario.keys())
 
+        busca_prontuario_por_numero(dic_prontuarios, numero)
         # pergunta qual dado atualizar
         while (opcao != "não"):
             indice = imprime_menu_atualizar()    #recebe um inteiro
-
             #se o indice estiver entre 1 e a quantidade de chaves
             if(indice >= 1 and indice <= len(chaves)):
                 novo_valor = input(f"\tDigite o novo valor de {chaves[indice-1]}: ")
