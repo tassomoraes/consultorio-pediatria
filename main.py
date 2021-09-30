@@ -110,11 +110,15 @@ def remove_prontuario(dic_prontuarios, nome_paciente):
 
 #LISTAR PRONTUÁRIOS
 def listar_prontuarios(dic_prontuarios):
-    print(f"Paciente     -   N. do prontuário")
-    for num_prontuario in dic_prontuarios:
-        nome = dic_prontuarios[num_prontuario]['Nome']
-        print(f" {nome}\t\t - \t\t {num_prontuario}")
-        #busca_prontuario_por_numero(dic_prontuarios, num_prontuario)
+    # verifica se o prontuário existe ou não
+    if (len(dic_prontuarios) < 1):
+        print("Nenhum prontuário encontrado!")
+    else:
+        print(f"N. do prontuário -   Paciente")
+        for num_prontuario in dic_prontuarios:
+            nome = dic_prontuarios[num_prontuario]['Nome']
+            print(f" \t\t{num_prontuario}\t\t - \t {nome}")
+            #busca_prontuario_por_numero(dic_prontuarios, num_prontuario)
 
 #IMRPIME MENU
 def imprime_menu():
