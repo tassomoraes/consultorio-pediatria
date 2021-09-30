@@ -62,7 +62,11 @@ def atualizar_prontuario_por_numero(dic_prontuarios, numero):
             #se o indice estiver entre 1 e a quantidade de chaves
             if(indice >= 1 and indice <= len(chaves)):
                 novo_valor = input(f"\tDigite o novo valor de {chaves[indice-1]}: ")
-                prontuario[chaves[indice-1]] = novo_valor
+                #se for um valor que compões uma lista adiciona o elemento na lista
+                if(chaves[indice-1] == "Peso" or chaves[indice-1] == "IMC" or chaves[indice-1] == "Altura" or chaves[indice-1] == "Perimétro Cefálico"):
+                    prontuario[chaves[indice-1]].append(float(novo_valor))
+                else:
+                    prontuario[chaves[indice-1]] = novo_valor
 
             elif(opcao != 0):
                 print("Entrada inválida!")
