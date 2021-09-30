@@ -180,9 +180,16 @@ def ler_arquivo(dic_prontuarios, nome_arquivo):
         prontuario = {}
         for item in dados.split(","):   # separa os itens do segundo dicionário
             chave, dado = item.split(":")   # separa a chave do dado
+            if dado[0] == "[":
+                dado = dado.replace("[","")   # remove [
+                dado = dado.replace("]","")   # remove ]
+                dado = dado.replace("\n","")   # remove \n
+                dado = dado.split("/")        # transforma em lista separando elementos
+                for i in range(len(dado)):     # transforma os itens da lista em reais
+                    dado[i] = float(dado[i])
             prontuario[chave] = dado
 
-        prontuario["Perimétro Cefálico"] = dado.strip()
+        #prontuario["Perimétro Cefálico"] = dado.strip()
         dic_prontuarios[num_prontuario] = prontuario
 
     arquivo.close()
