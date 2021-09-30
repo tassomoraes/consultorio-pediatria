@@ -1,4 +1,4 @@
-11
+12
 1-Nome:Tasso Luís Oliveira de Moraes,Sexo:M,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:[12.0/14.0/15.0/20.0],IMC:[24.0],Altura:[43.0],Perimétro Cefálico:[10.0]
 2-Nome:Tércio Luís Oliveira de Moraes,Sexo:M,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:[16.0/17.0/22.0/25.0],IMC:[23.0],Altura:[35.0],Perimétro Cefálico:[11.0]
 3-Nome:Tâmara Maria Oliveira de Moraes,Sexo:F,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:[18.0/21.0/26.0],IMC:[22.0],Altura:[40.0],Perimétro Cefálico:[12.3]
@@ -7,3 +7,4 @@
 6-Nome:João Gabriel Nanfre de Oliveira,Sexo:M,Mãe:Thais Nanfre de Oliveira,Pai:Thiago Nanfre de Oliveira,Peso:[32.0/30.0],IMC:[23.0],Altura:[130.0],Perimétro Cefálico:[24.0]
 7-Nome:Rafaelly Maria de Oliveira,Sexo:F,Mãe:Karen de Oliveira,Pai:Rafael Sávil de Oliveira,Peso:[22.0],IMC:[17.0],Altura:[93.0],Perimétro Cefálico:[29.0]
 8-Nome:Maria Menezes de Bezerra,Sexo:F,Mãe:Sibéria da Silva Matos,Pai:Luiz Gonzaga Beltrão,Peso:[34.0],IMC:[19.0],Altura:[123.0],Perimétro Cefálico:[32.0]
+12-Nome:Sophya Regis Bezerra,Sexo:F,Mãe:Sandra Regis,Pai:Joselito Bezerra,Peso:[25.0],IMC:[17.0],Altura:[98.0],Perimétro Cefálico:[23.0]
