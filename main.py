@@ -135,13 +135,21 @@ def imprime_menu():
     print(menu)
 
 #SALVA ARQUIVO
-def salva_arquivo(dic_prontuarios, nome_arquivo, arquivo):
+def salva_arquivo(dic_prontuarios, ultimo_paciente, arquivo):
 
     arquivo.write(str(ultimo_paciente)+"\n")
     for num_pront, dic_pront in dic_prontuarios.items():
-        arquivo.write(f"{num_pront}\n")
-        for chave, valor in dic_pront.items():
-            arquivo.write(f"{chave}\n{valor}\n")
+        arquivo.write(f"{num_pront}-")
+        nome, sexo, mae, pai, peso, imc, altura, pc = dic_pront.values()
+        arquivo.write(f"Nome:{nome},")
+        arquivo.write(f"Sexo:{sexo},")
+        arquivo.write(f"Mãe:{mae},")
+        arquivo.write(f"Pai:{pai},")
+        arquivo.write(f"Peso:{peso},")
+        arquivo.write(f"IMC:{imc},")
+        arquivo.write(f"Altura:{altura},")
+        arquivo.write(f"Perimétro Cefálico:{pc}\n")
+
         arquivo.flush()
 
 
