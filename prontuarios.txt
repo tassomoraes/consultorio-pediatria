@@ -1,10 +1,11 @@
-12
+13
 1-Nome:Tasso Luís Oliveira de Moraes,Sexo:M,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:[3.0/4.0/5.0/8.0/14.9/19.3/20.3],IMC:[24.0],Altura:[43.0],Perimétro Cefálico:[10.0]
 2-Nome:Tércio Luís Oliveira de Moraes,Sexo:M,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:[2.0/2.0/6.0/11.0/12.0/18.1/21.0],IMC:[23.0],Altura:[35.0],Perimétro Cefálico:[11.0]
 3-Nome:Tâmara Maria Oliveira de Moraes,Sexo:F,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:[4.0/6.0/9.0],IMC:[22.0],Altura:[40.0],Perimétro Cefálico:[12.3]
 4-Nome:Helloyza Regis Bezerra,Sexo:F,Mãe:Sandra Regis,Pai:Joselito Bezerra,Peso:[5.0/9.0/10.0/22.0/18.0],IMC:[21.0],Altura:[30.0],Perimétro Cefálico:[7.0]
 5-Nome:Natanael do Nascimento Silva,Sexo:M,Mãe:Mariana do Nascimento,Pai:Ronaldo Pereira do Nascimento,Peso:[1.7/3.2/5.0/17.0],IMC:[16.0],Altura:[59.0],Perimétro Cefálico:[8.0]
 6-Nome:João Gabriel Nanfre de Oliveira,Sexo:M,Mãe:Thais Nanfre de Oliveira,Pai:Thiago Nanfre de Oliveira,Peso:[2.3/4.0],IMC:[23.0],Altura:[130.0],Perimétro Cefálico:[24.0]
-7-Nome:Rafaelly Maria de Oliveira,Sexo:F,Mãe:Karen de Oliveira,Pai:Rafael Sávil de Oliveira,Peso:[2.0],IMC:[17.0],Altura:[93.0],Perimétro Cefálico:[29.0]
+7-Nome:Rafaelly Maria de Oliveira,Sexo:F,Mãe:Karen de Oliveira,Pai:Rafael Sávil de Oliveira,Peso:[2.0/3.2],IMC:[17.0],Altura:[93.0],Perimétro Cefálico:[29.0]
 8-Nome:Maria Menezes de Bezerra,Sexo:F,Mãe:Sibéria da Silva Matos,Pai:Luiz Gonzaga Beltrão,Peso:[4.0],IMC:[19.0],Altura:[123.0],Perimétro Cefálico:[32.0]
 12-Nome:Sophya Regis Bezerra,Sexo:F,Mãe:Sandra Regis,Pai:Joselito Bezerra,Peso:[5.4],IMC:[17.0],Altura:[98.0],Perimétro Cefálico:[23.0]
+13-Nome:Wesley da Silva Cavalcante,Sexo:M,Mãe:Maria da Silva Oliveira,Pai:Edson Monteiro de Correia,Peso:[1.8],IMC:[321.0],Altura:[321.0],Perimétro Cefálico:[32.0]
