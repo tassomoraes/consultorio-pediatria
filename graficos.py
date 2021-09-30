@@ -80,6 +80,8 @@ def porcentagem_peso(dicionario):
 
     plt.pie(quantidade, labels=label, colors=cores, startangle=90, shadow=True)
 
+    plt.title("Porcentagem em relação a condição do peso")
+
     plt.show()
 
 

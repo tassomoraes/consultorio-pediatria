@@ -1,3 +1,13 @@
+"""
+@author:
+Tasso Luís Oliveira de Moraes
+tlom@cin.ufpe.br
+
+Projeto de Introdução a Python
+Residência Visão Computacional
+CIn - UFPE
+"""
+
 import graficos
 from graficos import curva_de_crescimento_peso
 
