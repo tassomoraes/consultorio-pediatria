@@ -82,7 +82,7 @@ def busca_prontuario_por_numero(dic_prontuarios, numero):
         for chave in prontuario.keys():
             print(f"{chave}: {prontuario[chave]}")
 
-#REMOVER PRONTUARIO
+#REMOVER PRONTUARIO POR NÚMERO
 def remove_prontuario_por_numero(dic_prontuarios, numero):
 
     #verifica se o prontuário existe ou não
@@ -91,6 +91,22 @@ def remove_prontuario_por_numero(dic_prontuarios, numero):
     else:
         dic_prontuarios.pop(numero)
         print("Paciente removido!")
+
+#REMOVER PRONTUÁRIO POR NOME
+def remove_prontuario(dic_prontuarios, nome_paciente):
+
+    lista_prontuarios = {}
+    for numero, prontuario in dic_prontuarios.items():
+        if nome_paciente in prontuario["Nome"]:
+            lista_prontuarios[numero] = prontuario
+
+    if (len(lista_prontuarios) == 1):
+        numero = list(lista_prontuarios.keys())[0]
+        remove_prontuario_por_numero(dic_prontuarios,numero)
+    else:
+        listar_prontuarios(lista_prontuarios)
+        opcao = int(input("Digite o número do prontuário a ser removido: "))
+        remove_prontuario_por_numero(dic_prontuarios,opcao)
 
 #LISTAR PRONTUÁRIOS
 def listar_prontuarios(dic_prontuarios):
