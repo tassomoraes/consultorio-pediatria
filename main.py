@@ -188,28 +188,51 @@ while (opcao != "0"):
     opcao = input("Digite uma das opções: ")
 
     if (opcao == "1"):
+        ultimo_paciente = ler_arquivo(prontuarios,nome_do_arquivo)    # recebe o valor do arquivo
+        #print(f"prontuarios antes: {prontuarios}")
+
         print("\nCadastrar novo paciente:")
-        ultimo_paciente = criar_protuario(prontuarios,ultimo_paciente)
-        arquivo = open(nome_do_arquivo, "w", encoding="windows-1252")
+        ultimo_paciente = criar_protuario(prontuarios,ultimo_paciente,lista_dados)  # atualiza o valor
+        #print(f"prontuarios depois: {prontuarios}")
+
+        arquivo = open(nome_do_arquivo, "w")
         salva_arquivo(prontuarios,ultimo_paciente,arquivo)
         arquivo.close()
 
     elif (opcao == "2"):
+        ultimo_paciente = ler_arquivo(prontuarios,nome_do_arquivo)    # recebe o valor do arquivo
+
+        listar_prontuarios(prontuarios)
         print("\nBuscar paciente:")
         numero = int(input("Digite o número do paciente: "))
         busca_prontuario_por_numero(prontuarios,numero)
 
     elif (opcao == "3"):
+        ultimo_paciente = ler_arquivo(prontuarios,nome_do_arquivo)    # recebe o valor do arquivo
+
         print("\nRemover paciente:")
-        numero = int(input("Digite o número do paciente: "))
-        remove_prontuario_por_numero(prontuarios, numero)
+        nome = input("Digite o nome do paciente: ")
+        remove_prontuario(prontuarios, nome)
+
+        arquivo = open(nome_do_arquivo, "w")
+        salva_arquivo(prontuarios,ultimo_paciente,arquivo)
+        arquivo.close()
 
     elif (opcao == "4"):
+        ultimo_paciente = ler_arquivo(prontuarios,nome_do_arquivo)    # recebe o valor do arquivo
+
+        listar_prontuarios(prontuarios)
         print("\nAtualizar paciente:")
         numero = int(input("Digite o número do paciente: "))
         atualizar_prontuario_por_numero(prontuarios, numero)
 
+        arquivo = open(nome_do_arquivo, "w")
+        salva_arquivo(prontuarios,ultimo_paciente,arquivo)
+        arquivo.close()
+
     elif (opcao == "5"):
+        ultimo_paciente = ler_arquivo(prontuarios,nome_do_arquivo)    # recebe o valor do arquivo
+
         print("\nListando prontuários:")
         listar_prontuarios(prontuarios)
 

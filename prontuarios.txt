@@ -1,0 +1,6 @@
+5
+1-Nome:Tasso Luís Oliveira de Moraes,Sexo:M,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:12,IMC:24,Altura:43,Perimétro Cefálico:10
+2-Nome:Tércio Luís Oliveira de Moraes,Sexo:M,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:16,IMC:23,Altura:35,Perimétro Cefálico:11
+3-Nome:Tâmara Maria Oliveira de Moraes,Sexo:F,Mãe:Silvana Maria Oliveira de Moraes,Pai:Eron Luiz Morares da Silva,Peso:18,IMC:22,Altura:40,Perimétro Cefálico:12.3
+4-Nome:Helloyza Regis Bezerra,Sexo:F,Mãe:Sandra Regis,Pai:Joselito Bezerra,Peso:19,IMC:21,Altura:30,Perimétro Cefálico:7
+5-Nome:Natanael do Nascimento,Sexo:M,Mãe:Mariana do Nascimento,Pai:Ronaldo Pereira do Nascimento,Peso:15,IMC:16,Altura:59,Perimétro Cefálico:8
